@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Code Cast</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="logoCCnero.png">
+</head> 
+
+<body>
+
+    <header>
+        
+        <div class="row">
+            <div class="logo">
+            <img src="logo.png"
+        </div>
+            
+        <ul class="main-nav">    
+            <li class="active"><a href="home.html"> HOME </a></li>
+            <li><a href="scrum.html"> SCRUM </a></li>
+            <li><a href="chiSiamo.html"> CHI SIAMO </a></li>
+            <li><a href="doveSiamo.html"> DOVE SIAMO </a></li>
+            <li><a href="progetto.html"> PROGETTO </a></li>
+            <li><a href="contattaci.html"> CONTATTACI </a></li>
+            <li><a href="app.html"> APP </a></li>
+        </ul>    
+        
+        </div>
+        
+        <div class="hero"> </div>
+
+
+        <div id="mappa">
+            <div class="images">
+                <img class="mySlides" src="lavagna1.jpg">
+                    <center><p class="imgtext"></p></center>
+                <img class="mySlides" src="presentazione1.jpg">
+                    <center><p class="imgtext"></p></center>
+                <img class="mySlides" src="presentazione2.jpg">
+                    <center><p class="imgtext"></p></center>
+                <img class="mySlides" src="presentazione3.jpg">
+                    <center><p class="imgtext"></p></center>
+                <img class="mySlides" src="presentazione4.jpg">
+                    <center><p class="imgtext"></p></center>
+                <img class="mySlides" src="presentazione5.jpg">
+                    <center><p class="imgtext"></p></center>
+                <img class="mySlides" src="presentazione6.jpg">
+                    <center><p class="imgtext"></p></center>
+            <br>    
+                <center><button id="button-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button id="button-right" onclick="plusDivs(1)">&#10095;</button></center><br>
+            </div>
+        </div>
+
+    </header>
+
+</body>    
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+    function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var y = document.getElementsByClassName("imgtext");
+    if (n > x.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     y[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";  
+    y[slideIndex-1].style.display = "block";
+    }
+
+</script>
+
+</html>
